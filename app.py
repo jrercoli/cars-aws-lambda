@@ -49,6 +49,9 @@ def handler(event, context):
         "body": json.dumps(out_dict)
     }
 
+    if response is None:
+        return Exception('Error None response')
+
     return response
     # return 'Hola desde AWS lambda con Python' + sys.version
 
